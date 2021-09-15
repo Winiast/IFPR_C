@@ -1,34 +1,35 @@
 #include <stdio.h>
 
 int main(){
-
-    int numero, Maior, Menor;
-
-    
-  
-    printf("Numero ");
-    scanf("%i", &numero);
-
-    Maior = numero;
-    Menor = numero;
-        
+    // Declarando variaveis
+    int numero, Maior, Menor, cont;
+//Setando Valores
+Maior = 0;
+Menor = 0;
+cont = 0;
+    // Fica no laço enquanto maior que 0
     while(numero >= 0){
-
+        // Seta o primeiro valor igual ao digitado
+        if (cont == 1){
+            Maior = numero;
+            Menor = numero;
+        }
+        // Maior
         if (numero > Maior){
             Maior = numero;
         }
+        //Menor
         if (numero < Menor){
             Menor = numero;
         }
-
-        printf("Numero ");
+        // Pergunta o numero e soma 1 no contador
+        printf("Numero: ");
         scanf("%i", &numero);
-        
-
-
-
+        cont = cont + 1;
     }
-    printf("- Maior: %i", Maior);
-    printf("\n- Menor %i", Menor);
-
+    
+    //Mostra resultado final
+    printf(" - Maior: %i\n", Maior);
+    printf(" - Menor: %i", Menor);
 }
+   
