@@ -1,40 +1,30 @@
 #include <stdio.h>
-#include <ctype.h>
-#include <string.h>
 
-int main(){
+int main() {
+    
 
-    char LetraInicio, LetraFim, aumenta, BreakInicio, BreakFinal,resultado;
-
-    int i;
-
-    char * alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
- 
+    //Declarando Variaveis
+    char valor01, valor02;
 
 
     printf("Digite dois caracteres: ");
-    scanf("%c %c",&LetraInicio, &LetraFim);
-    
-    LetraInicio = toupper(LetraInicio);
-    LetraFim = toupper(LetraFim);
-    
-    for(i = 0; i <= 27; i++){
+    scanf("%c %c", &valor01, &valor02);
 
-        printf("%i", i);
-        if(alfabeto[i] == LetraInicio){
-            BreakInicio = i;
-        }
+    //Tabela ASCII 65 = A Maisculo até Z = 90
+    if(valor01 > 90){
+        valor01 = valor01 - 32;
+    }
+    if(valor02 > 90){
+        valor02 = valor02 - 32;
+    }
 
-        if(alfabeto[i] == LetraFim){
-            BreakFinal = i;
-        }
-    
-}
+    printf(" - ");
 
-resultado = BreakInicio - BreakFinal;
-
-//printf("%c", resultado);
-printf("%c %c", BreakInicio, BreakFinal);
-
+    //Laço de Repetição
+    while(valor01 <= valor02){
+        printf("%c ", valor01);
+        valor01 = valor01 + 1;
+    }
 
 }
+
