@@ -18,7 +18,7 @@ int main(){
 
         //Verificando se o valor da 0
         TestePrimos = Valor % contador;
-        
+
         // Colando no contador se for 0
         if(TestePrimos == 0){
             contadorPrimeza = contadorPrimeza + 1;

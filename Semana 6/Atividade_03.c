@@ -1,13 +1,14 @@
 #include <stdio.h>
 #include <ctype.h>
+#include <string.h>
 
 int main(){
 
-    char LetraInicio, LetraFim, aumenta, BreakInicio, BreakFinal;
+    char LetraInicio, LetraFim, aumenta, BreakInicio, BreakFinal,resultado;
 
     int i;
 
-    char alfabeto[23] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    char * alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
  
 
 
@@ -17,8 +18,9 @@ int main(){
     LetraInicio = toupper(LetraInicio);
     LetraFim = toupper(LetraFim);
     
-    for(i = 0; i <= 23; i++){
+    for(i = 0; i <= 27; i++){
 
+        printf("%i", i);
         if(alfabeto[i] == LetraInicio){
             BreakInicio = i;
         }
@@ -26,12 +28,13 @@ int main(){
         if(alfabeto[i] == LetraFim){
             BreakFinal = i;
         }
-
-
-
     
-    
-
 }
+
+resultado = BreakInicio - BreakFinal;
+
+//printf("%c", resultado);
+printf("%c %c", BreakInicio, BreakFinal);
+
 
 }
