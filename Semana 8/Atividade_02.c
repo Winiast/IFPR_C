@@ -1,20 +1,23 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
-int main(){
+int main() {
 
-    int valor, ini, fim, box, box01;
+    int  ant=1, atu=1, num_t, prox, cont;
 
-    printf("Digite um valor inteiro: ");
-    scanf("%i ", &valor);
+    printf("Numero de termos: ");
+    scanf("%i", &num_t);
 
-    box = valor - 1;
+    printf("\n- Serie de Fibonacci[%i]: 1 1 ", num_t);
 
-    for(ini = 0; valor; valor = valor -1){
-
-        pritf("%i x ", valor);
-
+    for(cont = 2; cont < num_t; cont++) {
+        prox = ant + atu;
+        printf("%i ", prox);
+        ant = atu;
+        atu = prox;
     }
 
-
-    }
+    printf("\n");
+    return 0;
 }
