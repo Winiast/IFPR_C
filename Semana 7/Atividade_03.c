@@ -2,7 +2,9 @@
 
 
 int main(){
+
     int topo,base, tam_base, tam_topo, count;
+    
     printf("Digite base e topo: ");
     scanf("%i %i", base, topo);
 
