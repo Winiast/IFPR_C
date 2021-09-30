@@ -8,17 +8,21 @@ int main(){
     printf("Digite base e topo: ");
     scanf("%i %i", &base, &topo);
 
-    while(tam_topo < topo){
 
-        tam_topo = tam_topo + 1;
-        printf("\n");
-        tam_base = 0;
-        
-        while(tam_base < base){
-            tam_base = tam_base + 1;
-            printf("*");
+        while(topo <= base){
+
+            
+            while(tam_base <= topo){
+                printf("*");
+                tam_base++;
+            
+            }
+            tam_base = 0;
+            topo++;
+            printf("\n");
+            base--;
         }
-        
 }
 
-}
+
+        
