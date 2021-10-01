@@ -11,13 +11,13 @@ int main(){
 
     while(cont_altura <= altura)
     {   
-        printf("\n");
         cont_largura = 1;
 
         while(cont_largura <= largura){
-            printf("*");
+            printf("* ");
             cont_largura =  cont_largura + 1;
         }
+        printf("\n");
 
         cont_altura = cont_altura + 1;
     }

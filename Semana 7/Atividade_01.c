@@ -4,7 +4,7 @@ int  main() {
 
     int ini, fim, div, cont;
 
-    printf("Digite um valor: ");
+    printf("Digite dois valores: ");
     scanf("%i %i", &ini, &fim); // 5 10
 
     printf("Numeros primos entre (%i) e (%i): ", ini, fim);
