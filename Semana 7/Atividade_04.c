@@ -3,7 +3,7 @@
 
 int main(){
 
-    int numero = 0, cont = 1, teste = 0, soma = 0;
+    int numero = 0, cont = 1, teste = 0, soma = 0, flag =  1;
 
     printf("Numero inteiro: ");
     scanf("%i", &numero);
@@ -14,8 +14,15 @@ int main(){
 
 
         if (teste == 0){
-            soma = soma + cont;
-            printf("%i + ", cont);
+            if(flag == 1){
+                soma = soma + cont;
+                printf(" %i", cont);
+                flag = 0;
+            }
+            else{
+                soma = soma + cont;
+                printf(" + %i", cont);
+                }
                 
         }
 
@@ -24,11 +31,11 @@ int main(){
     }
 
     if(soma == numero){
-        printf("= %i [PERFEITO]", soma);
+        printf(" = %i [PERFEITO]", soma);
 
     }
 
     else{
-        printf("= %i [IMPERFEITO]", soma);
+        printf(" = %i [IMPERFEITO]", soma);
     }
 }
