@@ -3,7 +3,7 @@
 
 int main() {
 
-    int fatorial =0, cont, valor = 0, flag=1,cont_02 = 0, soma =0;
+    int fatorial =0, cont, valor = 0, flag=1, flag_02 =1;
      
     printf("Digite um valor inteiro: ");
     scanf("%i", &valor);
@@ -16,10 +16,7 @@ int main() {
 
      for(cont=0; valor > cont; valor--){
 
-         
-        fatorial = valor * cont_02;
-        soma = soma + fatorial;
-
+        
         if(flag == 1){
             printf(" %i", valor);
             flag = 0;
@@ -28,5 +25,5 @@ int main() {
         printf(" x %i", valor);
         }
      }
-     printf(" = %i", soma);
+     printf(" = %i");
 }
