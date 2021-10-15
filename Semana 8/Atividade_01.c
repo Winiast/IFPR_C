@@ -3,10 +3,19 @@
 
 int main() {
 
-    int fatorial =0, cont, valor = 0, flag=1, flag_02 =1;
+    int fatorial =0, cont, valor = 0, flag=1, flag_02 =1, fac =0, i = 0;
      
     printf("Digite um valor inteiro: ");
     scanf("%i", &valor);
+    
+    fac = valor;
+    i = valor;
+    
+    for(i;i > 1;i--){
+        fac = fac * (i - 1);     
+    }
+
+   
 
     
 
@@ -25,5 +34,5 @@ int main() {
         printf(" x %i", valor);
         }
      }
-     printf(" = %i");
+     printf(" = %i", fac);
 }
