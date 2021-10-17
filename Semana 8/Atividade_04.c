@@ -14,8 +14,8 @@ int main(){
 
         for(j=1; j <= 7; j++){
             printf(" %i ", valor[j]);
-            
-        }
+           
+    
     }
     printf(" \n");
 
