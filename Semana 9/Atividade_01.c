@@ -12,7 +12,7 @@ int main(){
 	float media;
 
 	for(i = 0; i < 10; i++){
-		numero[i] = 10 + rand() % 99; //pega um numero aleatorio
+		numero[i] = 10 + (rand() % 89); //pega um numero aleatorio
 	}
 
 	printf("\n Valores Aleatorios: ");
