@@ -2,7 +2,7 @@
 
 int main(){
 
-    int valor_01, valor_02, i, perfeito = 0, cont = 0, teste = 0, soma =0, valor_testado;
+    int valor_01, valor_02,a, b, teste, soma = 0;
     
     printf(" Digite dois numeros: ");
     scanf("%i %i", &valor_01, &valor_02);
@@ -10,17 +10,19 @@ int main(){
 
     printf("Numeros perfeito entre (%i) e (%i): ", valor_01, valor_02);
 
-    valor_01 = valor_01 + 1;
-    valor_testado = valor_01;
+   for(a=valor_01; a <= valor_02; a++){
 
-    for(valor_01; valor_01 < valor_02; valor_01++){
-        
-        printf("\n%i", valor_01);
+       for(b=1; b < a; b++){
 
-         for(i=0; valor_01 > i; i++){
-
-        
-
-    }
+           teste = a % b;
+           if(teste == 0){
+               soma = soma + b;
+           }
+       }
+       if(soma == a){
+          printf(" %i ", soma);
+       }
+       soma = 0;
+   }
 
 }
