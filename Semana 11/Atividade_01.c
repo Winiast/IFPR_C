@@ -3,19 +3,20 @@
 
 int main(){
 
-    int a, cont =0;
-    char frase[50], letra[1];
+    char frase[50], count = 0;
+    char caractere[2];
+    int a;
 
-    printf("Digite a frase: ");
+    printf("Dgite a frase: ");
     gets(frase);
-    fflush();
-    //printf("Digite o caractere: ");
-    //gets(letra);
+    printf("Digite o caractere: ");
+    gets(caractere);
 
-    //for(a=0; frase[a] != '\0'; a++){
-    //    cont++;
-    //}
+    for(a=0; frase[a] != '\0'; a++){
+        if(caractere[0] == frase[a]){
+            count++;
+        }
+    }
 
-    printf("\n[%s]", frase);
-    printf("\n[%s]", letra);
+    printf("- O caractere (%s) foi encontrado (%i) veze(s)" ,caractere, count);
 }
