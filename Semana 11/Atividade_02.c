@@ -5,18 +5,16 @@
 
 int main() {
 
-	// Declarando um vetor (char) de "nomes"
-	char nome[10];
-	// Variável que vai representar a posição do vetor
+	char aleatorio[10];
+
 	int a;
-	// Variável que recebe o nome a ser buscado
+
 	char n;
 
-	// Preenchendo vetor nome aleatoriamente
 	srand(time(NULL));
 
-	printf("Nomes Gerados: ");	
-	// Preenchendo e imprimindo o vetor com laço
+	printf("Valor Aleatorio: ");	
+
 	for(a=0; a<10; a++) {
 		nome[a] = (rand()%25) + 65;
 		printf("%c ", nome[a]);
