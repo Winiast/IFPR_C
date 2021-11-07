@@ -20,7 +20,7 @@ int main() {
   // Executa para cada número
   for (i = 0; i < 7; i++) {
     // Compara com cada numero do array, começando pelo próximo (j = i + 1)
-    for (j = i + 1; j < 7; j++) {
+    for (j = i + 1; j < 7 ; j++) {
       // Se o próximo numero é maior que o atual, troca eles de posição
       if (numeros[i] > numeros[j]) {
         // Armazena o numero atual numa var. temporaria, troca de posição
