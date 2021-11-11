@@ -8,7 +8,7 @@ int main() {
 
 	char aleatorio[TAM], palavra[TAM];
 
-	int a, y, teste, count =0, letras = 0;
+	int a, y, teste, count =0,count_rep, letras = 0;
 
 	char n;
 
@@ -19,6 +19,21 @@ int main() {
 	for(a=0; a<TAM; a++){
 
 		aleatorio[a] = 65 + (rand()%25);
+	}
+
+	for(a=0; a<TAM; a++){
+
+		for(y= a + 1; y<TAM; y++){
+
+			if(aleatorio[a] == aleatorio[y]){
+				aleatorio[a] = aleatorio[a] + 32;
+			}
+
+			else{
+				count_rep++;
+			}
+
+		}
 	}
 
 
@@ -46,7 +61,7 @@ int main() {
 		printf("\n [ E POSSIVEL] ");
 	}
 	else{
-		printf("\nNAO E POSSIVEL");
+		printf("\n[NAO E POSSIVEL]");
 	}
 
 }

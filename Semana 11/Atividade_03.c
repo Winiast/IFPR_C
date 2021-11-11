@@ -7,7 +7,7 @@ int main(){
     char string_01[20];
     char string_02[20];
     char temp[20];
-    int a, y = 0;
+    int a, y;
 
     printf("\nString conteudo: ");
     gets(string_01);
@@ -17,13 +17,12 @@ int main(){
 
     for(a=0; string_01[a] != '\0'; a++){
 
-        //for(a=0; string_02[a] != '\0'; a++){
-            if(string_01[a] == string_02[a]){
-                temp[y] = string_01[a];
-                y = y + 1;
+        for(y=0; string_02[y] != '\0';y++){
+            if(string_02[y] == string_01[a]){
+                printf("%c ", string_02[y]);
+                
             }
-        //}
-
+        }
     }
     for(a=0; temp[a] != '\0'; a++){
         printf(" %c ", temp[a]);
