@@ -2,12 +2,13 @@
 #include <time.h>
 #include <stdlib.h>
 
+#define TAM 10
 
 int main() {
 
-	char aleatorio[10];
+	char aleatorio[TAM], palavra[TAM];
 
-	int a;
+	int a, y, teste, count =0, letras = 0;
 
 	char n;
 
@@ -15,23 +16,37 @@ int main() {
 
 	printf("Valor Aleatorio: ");	
 
-	for(a=0; a<10; a++) {
-		nome[a] = (rand()%25) + 65;
-		printf("%c ", nome[a]);
+	for(a=0; a<TAM; a++){
+
+		aleatorio[a] = 65 + (rand()%25);
 	}
 
-	// Nome
-	printf("\n\nDigite um nome para busca: ");
-	scanf("%c", &n);
 
-	// Buscando um nome
-	for(a=0; a<10; a++) {
-		if(nome[a] == n) {
-			printf("\n\t-> Nome encontrado, na posicao %i", a);
+	for(a=0; a<TAM; a++){
+		printf(" %c ", aleatorio[a]);
+	}
+
+	printf("\nPalavra: ");
+	gets(palavra);
+
+	for(letras = 0; palavra[letras] != '\0'; letras++){
+
+	}
+	printf("\n Tem (%i) letras", letras);
+
+	for(a=0; a<TAM; a++){
+		for(y=0; aleatorio[y] != '\0'; y++){
+			if(palavra[a] == aleatorio[y]){
+				count++;
+			}
 		}
 	}
+	printf("\n Contador ( %i ) ", count);
+	if(count == letras){
+		printf("\n [ E POSSIVEL] ");
+	}
+	else{
+		printf("\nNAO E POSSIVEL");
+	}
 
-	printf("\n");
-	getchar();
-	return 0;
 }
