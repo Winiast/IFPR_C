@@ -47,7 +47,7 @@ int main() {
 	for(letras = 0; palavra[letras] != '\0'; letras++){
 
 	}
-	printf("\n Tem (%i) letras", letras);
+
 
 	for(a=0; a<TAM; a++){
 		for(y=0; aleatorio[y] != '\0'; y++){
@@ -56,12 +56,12 @@ int main() {
 			}
 		}
 	}
-	printf("\n Contador ( %i ) ", count);
+
 	if(count == letras){
-		printf("\n [ E POSSIVEL] ");
+		printf("\n- [ E POSSIVEL] ");
 	}
 	else{
-		printf("\n[NAO E POSSIVEL]");
+		printf("\n- [NAO E POSSIVEL]");
 	}
 
 }

@@ -16,12 +16,12 @@ int main(){
         aleatorio[a] = 65 + rand() % 25;
     }
     
-    printf("\nVetor Aleatorio: ");
+    printf("\n- Vetor Aleatorio: ");
     for(a = 0; a < TAM; a++){
         printf("%c ", aleatorio[a]);
     }
 
-    printf("\nVetor Alterado:  ");
+    printf("\n- Vetor Alterado:  ");
     for(a=0; a < TAM; a++){
         for(b= a + 1; b < TAM; b++){
             if(aleatorio[a] == aleatorio[b]){
