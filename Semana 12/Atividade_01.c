@@ -16,6 +16,8 @@ int main(){
 
     int flag = 1, flag_02, y;
 
+    char palavra_mostra[30];
+
     int num;
 
     // Pegando Info Init
@@ -28,14 +30,26 @@ int main(){
     printf("2 Dica: ");
     gets(dica_02);
 
+    for(a = 0; palavra[a] != '\0'; a++){
+        palavra_mostra[a] = palavra[a];
+        tamanho_palavra++;
+    //    printf("%c" ,palavra_mostra[a]);
+    }
 
+    for(a = 0; palavra[a] != '\0'; a++){
+            palavra_mostra[a] = 95;
+    }
 
+    acertos = 0;
+
+    system("cls");
     //Setup Inicio
     while(total_erros != maximo_de_erros){
 
            if(total_dicas_usadas == 2){
                dicas_disp = 0;
            }
+
 
         printf("\n---------------------------------------------------------------------------------" );
         printf("\n---------------------------------------------------------------------------------" );
@@ -60,18 +74,22 @@ int main(){
 
         printf("\n------- PALAVRA: ");
 
-        for(a=0; palavra[a] != '\0'; a++){
+        
 
+        for(a = 0; palavra[a] != '\0'; a++){
             if(letra[0] == palavra[a]){
-                printf(" %c ", letra[0]);
+                palavra_mostra[a] = letra[0];
+                acertos++;
             }
-            else{
-                printf(" _ ");
-                tamanho_palavra ++;
-            }
-            
-
+            printf("%c" ,palavra_mostra[a]);
+            printf(" ");
         }
+            if(acertos == tamanho_palavra){
+            resultado = 1;
+            break;
+            }
+        
+
         printf("\n---------------------------------------------------------------------------------" );
         printf("\n---------------------------------------------------------------------------------" );
         printf("\n--------- 1) EFETUAR JOGADA -----------------------------------------------------" );
@@ -86,21 +104,22 @@ int main(){
 
         // Parte caso ele queira digitar uma letra
         if(num == 1){
-            char palavra_mostra[30];
-            palavra_mostra[30] = palavra[30];
+            count_palavra = 0;
             fflush(stdin);
             printf("Digite uma letra (a - z): ");
             gets(letra);
-            for(a = 0; a != '\0'; a++){
-                if(palavra[a] == letra[0]){
-                    
+            for(a=0; palavra[a] != '\0'; a++){
+                if(letra[0] == palavra[a]){
+                    count_palavra++;
                 }
-                else{
-                    total_erros = total_erros + 1;
-                }
-            
             }
-           
+            if(count_palavra == 0){
+                total_erros++;
+            }
+            if(total_erros == maximo_de_erros){
+                resultado = 0;
+                break;
+            }
         }
 
         // Parte em que o jogador solicita uma dica
@@ -199,8 +218,10 @@ int main(){
 
 
 
-
     // Finalizando O Game
+
+    system("cls");
+    
 
     if(total_dicas_usadas == 2){
             dicas_disp = 0;

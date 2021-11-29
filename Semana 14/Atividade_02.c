@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <windows.h>
 
 int main(){
     
     // Variaveis de Inicio
-    char palavra[30], dica_01[30], dica_02[30], letra[3], palavra_teste[30];
+    char palavra[30],palavra_c[30], dica_01[30], dica_02[30], letra[3], palavra_teste[30];
     
     int a, total_erros = 0, dicas_disp = 2, maximo_de_erros = 7;
 
@@ -15,9 +16,7 @@ int main(){
 
     int flag = 1, flag_02, y;
 
-    char palavra_mostra[30];
-
-    int num;
+    int num, count;
 
     // Pegando Info Init
     printf("\nPalavra: ");
@@ -29,8 +28,14 @@ int main(){
     printf("2 Dica: ");
     gets(dica_02);
 
-    for(a=0; a != '\0'; a++){
-        palavra_mostra[a] = palavra[a];
+    for(count = 0; palavra[count] != '\0'; count++){
+        palavra_c[count] = 95;
+        tamanho_palavra++;
+    }
+    count = 0;
+
+    for(count = 0; palavra_c[count] != tamanho_palavra; count++){
+        printf("%c", palavra_c[count]);
     }
 
     //Setup Inicio
@@ -63,9 +68,15 @@ int main(){
 
         printf("\n------- PALAVRA: ");
 
-        for(a=0; palavra_mostra[a] != '\0'; a++){
+        for(a=0; palavra[a] != '\0'; a++){
 
-                printf(" %c ", palavra_mostra[a]);
+            if(letra[0] == palavra[a]){
+                printf(" %c ", letra[0]);
+            }
+            else{
+                printf(" _ ");
+                tamanho_palavra ++;
+            }
             
 
         }
@@ -83,14 +94,17 @@ int main(){
 
         // Parte caso ele queira digitar uma letra
         if(num == 1){
-            
-
+            char palavra_mostra[30];
+            palavra_mostra[30] = palavra[30];
             fflush(stdin);
             printf("Digite uma letra (a - z): ");
             gets(letra);
             for(a = 0; a != '\0'; a++){
-                if(palavra[a] != letra[0]){
-                    palavra_mostra[a] = 95;
+                if(palavra[a] == letra[0]){
+                    
+                }
+                else{
+                    total_erros = total_erros + 1;
                 }
             
             }
@@ -184,8 +198,10 @@ int main(){
                 printf("\n  / \\");
             }
 
-
+            Sleep(3000);
         }
+
+        system("cls");
 
     }
 
