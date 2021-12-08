@@ -3,10 +3,16 @@
 
 int main(){
 
+int tam;
 
-printf("Número ímpar: ");
+int lin, col;
+
+
+printf("Numero impar: ");
+
 		scanf("%i", &tam);
 		
+		int mat[tam][tam];
 		// Monta Matriz
 		for(lin=0; lin<tam; lin++) {
 			for(col=0; col<tam; col++) {

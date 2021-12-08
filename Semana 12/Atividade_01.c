@@ -20,6 +20,13 @@ int main(){
 
     int num;
 
+    int submarinos_alocados = 0;
+    
+    int navios_alocados = 0;
+    
+    int porta_avioes_alocados = 0;
+
+
     // Pegando Info Init
     printf("\nPalavra: ");
     gets(palavra);

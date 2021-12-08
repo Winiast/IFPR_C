@@ -30,7 +30,7 @@ int main(){
             if(vert == colun){
                 printf(ANSI_COLOR_RED "%i  "ANSI_COLOR_GRAY, matriz[lin][colun]);
                 if(matriz[lin][colun] > maior_vert){
-                    maior = matriz[lin][colun];
+                    maior_vert = matriz[lin][colun];
                 } 
             }
             else{
