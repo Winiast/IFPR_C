@@ -3,19 +3,26 @@
 
 int main(){
     int x;
-    int tamanho = 5;
+    int tamanho;
 
-    int *p;
+    char *p;
 
-    p = malloc(tamanho*sizeof(int));
+    printf("Digite o tamanho: ");
+    scanf("%i", &tamanho);
 
-    for(x=0; x < tamanho; x++){
-        p[x] = x;
-        printf("\np[%i] = %i ",x , p[x]);
+    p = malloc(tamanho*sizeof(char));
+
+   fflush(stdin);
+
+   printf("Digite a palavra: ");
+   gets(p);
+
+   printf(" - Invertida = ");
+   for(x=tamanho; x != -1; x--){
+       printf("%c", p[x]);
+   }
 
 
-    }
-
-    free(p);
+   free(p);
     
 }
