@@ -1,8 +1,7 @@
 #include <stdio.h>
 
-char letra[6];
 
-void ordenar(char letra[6]);
+void ordenar(char letras[6]);
 
 int main(){
 
@@ -13,6 +12,7 @@ int main(){
     scanf("%c %c %c %c %c", &letras[1], &letras[2], &letras[3], &letras[4], &letras[5]);
 
 
+    printf("- Ordenado: ");
     ordenar(letras);
 }
 
@@ -41,8 +41,8 @@ void ordenar(char letras[6]){
         }
     }
 
-    printf(" - Ordenado: ");
-    for(int i = 1; i <= 5; i++){
+    for(int i = 1; i <=5; i++){
         printf("%c ", letraMaiscula[i]);
     }
+
 }

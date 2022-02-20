@@ -1,18 +1,19 @@
 #include <stdio.h>
 
-void agregar(int valor01, int valor02);
+double agregar(int valor01, int valor02);
 
 int main(){
     int valor01, valor02;
 
     printf("Digite dois numeros com 3 digitos: ");
     scanf("%i %i", &valor01, &valor02);
-
+    
+    printf("- Resultado: ");
     agregar(valor01,valor02);
 }
 
 
-void agregar(int valor01, int valor02){
+double agregar(int valor01, int valor02){
     int centena01, dezena01,unidade01;
     int centena02, dezena02,unidade02;
 
@@ -38,6 +39,6 @@ void agregar(int valor01, int valor02){
     if(totalunidade >= 10){
         totalunidade = 0;
     }
-
-    printf("- Resultado: %i%i%i ", totalcentena, totaldezena, totalunidade);
+    
+    printf("%i%i%i", totalcentena, totaldezena, totalunidade);
 }

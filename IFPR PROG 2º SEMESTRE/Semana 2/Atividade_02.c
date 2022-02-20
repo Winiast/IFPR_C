@@ -1,21 +1,21 @@
 #include <stdio.h>
 
-int valor, aux, fat, i;
-
-void fatorial(int valor);
+double fatorial(int valor);
 
 int main(){
+    int valor =0;
     printf("Digite um valor: ");
     scanf("%i", &valor);
 
-    fatorial(valor);
+    printf("- Fatorial: %.0f",fatorial(valor));
 }
 
-void fatorial(int valor){
-    fat = 1;
+double fatorial(int valor){
+    int fat = 1;
+    int i;
     for(i=1; i < valor + 1; i++){
         fat = fat * i;
     }
-    printf("%i",fat);
+    return fat;
 }
 
