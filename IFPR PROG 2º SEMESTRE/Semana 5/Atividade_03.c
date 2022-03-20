@@ -1,34 +1,40 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main(){
-    char *nome01, *nome02, *nome03;
-    char nome1[40], nome2[40], nome3[40];
-    int tam01, tam02,tam03;
+    char *palavra01, *palavra02, *palavra03, *concatenado, *concatenadopar;
+    char palavra1[40], palavra2[40], palavra3[40];
+    int tam01, tam02,tam03, conctam;
 
 
-    printf("Digite tres nomes: ");
+    printf("Digite tres nomes:\n");
     fflush(stdin);
-    gets(nome1);
+    gets(palavra1);
     fflush(stdin);
-    gets(nome2);
+    gets(palavra2);
     fflush(stdin);
-    gets(nome3);
+    gets(palavra3);
     fflush(stdin);
 
-    tam01 = strlen(nome1);
-    tam02 = strlen(nome2);
-    tam03 = strlen(nome3);
+    tam01 = strlen(palavra1);
+    tam02 = strlen(palavra2);
+    tam03 = strlen(palavra3);
+    conctam = tam01 + tam02 + tam03;
 
-    nome01 = malloc(tam01 * sizeof(char));
-    nome02 = malloc(tam02 * sizeof(char));
-    nome03 = malloc(tam03 * sizeof(char));
+    concatenadopar = malloc(conctam * sizeof(char));
+    concatenado = malloc(conctam * sizeof(char));
+    palavra01 = malloc(tam01 * sizeof(char));
+    palavra02 = malloc(tam02 * sizeof(char));
+    palavra03 = malloc(tam03 * sizeof(char));
 
-    printf("- Ordem Alfabetica: ");
+    
+    palavra01 = palavra1;
+    palavra02 = palavra2;
+    palavra03 = palavra3;
 
-    int i,x;
-    for(i=0; i < tam01; i++){
-        printf("%c", nome01[i]);
-    }
+    concatenadopar = strcat(palavra01, palavra02);
+    concatenado = strcat(concatenadopar, palavra03);
+    printf("- Concatenado: %s", concatenado);
 
 }

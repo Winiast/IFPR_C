@@ -53,10 +53,10 @@ int main(){
     }else if(tam03 < tam01 && tam03 < tam02){
         if(tam01 < tam03){
             nome02 = nome1;
-            nome03 = nome3;
+            nome03 = nome2;
         }
         else{
-            nome02 = nome3;
+            nome02 = nome2;
             nome03 = nome1;
         }
         nome01 = nome3;
