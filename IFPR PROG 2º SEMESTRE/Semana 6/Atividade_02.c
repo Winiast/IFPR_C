@@ -1,16 +1,37 @@
 #include <stdlib.h>
-#include <string>
+#include <stdio.h>
+#include <string.h>
 
 int main(){
-    int i, count = 0, teste = 0;
-    char palavra[20];
-    printf("Digite duas palavras: ");
-    char *p1[20], *p2[20];
+    int i, valor;
+    char *pfinal, aux[20];
+    char palavra01[20], palavra02[20], palavra03[20];
+    char *p1, *p2, *p3;
 
-    for(i = 0; i < 2; i++){
-        for(int x = 0; x != '\0'; x++){
-            teste = strcmp(p1[x], p2[x]);
-            if(teste )
-        }
-    }
+
+    p1 = malloc(20 * sizeof(char));
+    p2 = malloc(20 * sizeof(char));
+    p3 = malloc(20 * sizeof(char));
+    pfinal = malloc(60 * sizeof(char));
+    
+
+    printf("Digite o valor inteiro: ");
+    scanf("%i", &valor);
+
+    printf("Digite tres palavras:\n");
+    fflush(stdin);
+    gets(p1);
+    fflush(stdin);
+    gets(p2);
+    fflush(stdin);
+    gets(p3);
+
+
+
+    pfinal = strncat(pfinal, p1, valor);
+    pfinal = strncat(pfinal, p2, valor);
+    pfinal = strncat(pfinal, p3, valor);
+
+     printf("- Concatenado: %s", pfinal);
+
 }
